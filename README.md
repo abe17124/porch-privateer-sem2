@@ -1,30 +1,33 @@
 # Porch Pirate IoT LoRaWAN Device Semester 2
 
 # Description
-Porch Pirate IoT BLE Device for Senior Design Project Semester 2 @ Wichita State University. 
+Porch Pirate IoT BLE Device for Senior Design Project Semester 2 @ Wichita State University. This product allows the Wichita Police Department to track stolen assets/packages and retrieve them. This device is an IoT node that can be placed directly onto critical assets/packages to track the status of the package and alert interested parties through frontend application (Grafana or equivalent) for both iPhone and Android 10+.
 
 # Parts List 
-(WIP)
+* Adafruit Feather M0 with RFM95 LoRa Radio 
+* Adafruit 9-DOF Orientation IMU Fusion Breakout - BNO085
+* 3D Printed housing
+* GPS Module GT-U7
+* uFL SMT Antenna Connector
+* uFL to RP-SMA antenna adapter cable
+* RGB LED (Common Anode)
+
 
 # Method of Operation
-(WIP)
+This device uses a Adafruit BNO085 9 DOF sensor to percieve its current state and translates the raw data using the Adafruit Sensor Libraries into motion classifications such as On Table/Ground, Stable, and In Motion. The data is then forwarded to the Adafruit Feather M0 RFM95 where it is processed to send a LoRaWAN "Device is moving" packet through the HopeRF RFM95 chip to nearby Gateways. This data can be accessed through chirpstack and viewed through frontend application for Law Enforcement Officers to understand the state of a critical asset. Next steps include: Identifying motion through GPS coordinates, packaging coordinates as chars, transmitting through LoRaWAN to end gateways.
 
 
 # Schematic
-(WIP)
 ![image](https://user-images.githubusercontent.com/69644136/115118302-29b3da80-9f68-11eb-86fe-3ad450fbcc1e.png)
 
-# Dependancies
-The following dependancies need to be installed in for proper operation of the device, this device uses the Arduino IDE and other Adafruit Libraries for functioning properly.
-(WIP)
-
-
-# Installation
-To properly install the dependacies, please follow the guides linkes below.
-* Arduino IDE 1.8.13 : https://www.arduino.cc/en/software
-* Adafruit Feather M0 IDE Setup : https://learn.adafruit.com/adafruit-feather-m0-bluefruit-le/setup
-* Adafruit Feather M0 BLE Library Setup : https://learn.adafruit.com/adafruit-feather-m0-bluefruit-le/installing-ble-library
-* Adafruit BNO08x Library Setup: https://learn.adafruit.com/adafruit-9-dof-orientation-imu-fusion-breakout-bno085/arduino
+# Dependancies and Installation
+The following dependancies need to be installed in for proper operation of the device, this device uses the Arduino IDE and other Adafruit Libraries for functioning properly. To properly install the dependancies, please follow the guides below.
+* Arduino IDE 1.8.13 or higher : https://www.arduino.cc/en/software
+* Adafruit SAMD21 Board Dependancies : https://learn.adafruit.com/adafruit-feather-m0-basic-proto/setup
+* Adafruit Feather M0 RFM95 : https://learn.adafruit.com/adafruit-feather-m0-radio-with-lora-radio-module/using-the-rfm-9x-radio
+* Adafruit BNO08x Library: https://learn.adafruit.com/adafruit-9-dof-orientation-imu-fusion-breakout-bno085/arduino
+* TinyGPSPlus : https://github.com/mikalhart/TinyGPSPlus (Install through Arduino Library Manager)
+* TinyLora : https://github.com/adafruit/TinyLoRa (Install through Arduino Library Manager)
 
 # Authors
 Abishek Gomes, Devan Mears, Joseph Wackowski, Austin Major
