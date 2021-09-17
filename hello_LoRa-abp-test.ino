@@ -33,7 +33,7 @@ void setup()
   // Initialize LoRa
   Serial.print("Initializing LoRa Chip");
   lora.setChannel(MULTI); //Send to all available channels
-  lora.setDatarate(SF7BW125); //Set US908-928, Spreading Factor 125
+  lora.setDatarate(SF7BW125); //Set US908-928, Spreading Factor 7, BW125
   if(!lora.begin())
   {
     Serial.println("Failed to initialize Chip");
