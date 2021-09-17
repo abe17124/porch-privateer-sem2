@@ -18,7 +18,7 @@ uint8_t DevAddr[4] = {0x04, 0x05, 0x06, 0x07};
 unsigned char sendPacket[11] = {"hello LoRa"};
 const unsigned int delayInterval = 30;
 
-// SPI Pins for RFM95 Chip
+// Pins for RFM95 Chip
 TinyLoRa lora = TinyLoRa(3, 8, 4);
 
 void setup()
