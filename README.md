@@ -21,6 +21,13 @@ This device uses a Adafruit BNO085 9 DOF sensor to percieve its current state an
 ![image](https://user-images.githubusercontent.com/69644136/115118302-29b3da80-9f68-11eb-86fe-3ad450fbcc1e.png)
 ![WhatsApp Image 2021-09-17 at 11 07 53 AM](https://user-images.githubusercontent.com/69644136/133819804-879bdd46-a264-48e3-852f-415aea89bee7.jpeg)
 
+# Scripts
+The two scripts included in the repo are test revisions only meant for device development purposes and not intended for production deployment. You will see two scripts in the repo as shown below:
+* LORAWAN_GPS_MOTION_CLASSIFY.ino
+* hello_LoRa-abp-test.ino
+The first script functions as mentioned in the previous sections, where the accelerometer identifies that the device has moved which then pings the GPS to get current lattitude, longitude, and sattelite counts. This is then packaged in a LoRaWAN packet and sent along with a "Device has moved" packet.
+The last script is a basic functionality testing script that authenticates with the Chirpstack server using ABP and send a packet at regular intervals.
+
 # Dependancies and Installation
 The following dependancies need to be installed in for proper operation of the device, this device uses the Arduino IDE and other Adafruit Libraries for functioning properly. To properly install the dependancies, please follow the guides below.
 * Arduino IDE 1.8.13 or higher : https://www.arduino.cc/en/software
