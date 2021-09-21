@@ -25,6 +25,7 @@ This device uses a Adafruit BNO085 9 DOF sensor to percieve its current state an
 The two scripts included in the repo are test revisions only meant for device development purposes and not intended for production deployment. You will see two scripts in the repo as shown below:
 * LORAWAN_GPS_MOTION_CLASSIFY.ino
 * hello_LoRa-abp-test.ino
+
 The first script functions as mentioned in the previous sections, where the accelerometer identifies that the device has moved which then pings the GPS to get current lattitude, longitude, and sattelite counts. This is then packaged in a LoRaWAN packet and sent along with a "Device has moved" packet.
 The last script is a basic functionality testing script that authenticates with the Chirpstack server using ABP and send a packet at regular intervals.
 
