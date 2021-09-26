@@ -168,7 +168,7 @@ void loop(void)
           delay(500); //Blink LED when packet is sent
           digitalWrite(LED_BUILTIN, LOW);
 
-          if(Serial1.available()) //Retrieve NMEA Data from GPS
+          while(Serial1.available()) //Retrieve NMEA Data from GPS
           {
             gps.encode(Serial1.read()); // Feed data into TinyGPS library to get Lat Long
           }
