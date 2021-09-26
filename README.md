@@ -31,14 +31,13 @@ The last script is a basic functionality testing script that authenticates with 
 
 # Dependancies and Installation
 The following dependancies need to be installed in for proper operation of the device, this device uses the Arduino IDE and other Adafruit Libraries for functioning properly. To properly install the dependancies, please follow the guides below.
-* Arduino IDE 1.8.13 or higher : https://www.arduino.cc/en/software
-* Adafruit SAMD21 Board Dependancies : https://learn.adafruit.com/adafruit-feather-m0-basic-proto/setup
-* Adafruit Feather M0 RFM95 : https://learn.adafruit.com/adafruit-feather-m0-radio-with-lora-radio-module/using-the-rfm-9x-radio
-* Adafruit BNO08x Library: https://learn.adafruit.com/adafruit-9-dof-orientation-imu-fusion-breakout-bno085/arduino
-* TinyGPSPlus : https://github.com/mikalhart/TinyGPSPlus (Install through Arduino Library Manager)
-* TinyLora : https://github.com/adafruit/TinyLoRa (Install through Arduino Library Manager)
+* [Arduino IDE 1.8.13 or higher](https://www.arduino.cc/en/software)
+* [Adafruit SAMD21 Board Dependancies](https://learn.adafruit.com/adafruit-feather-m0-basic-proto/setup)
+* [Adafruit Feather M0 RFM95](https://learn.adafruit.com/adafruit-feather-m0-radio-with-lora-radio-module/using-the-rfm-9x-radio)
+* [Adafruit BNO08x Library](https://learn.adafruit.com/adafruit-9-dof-orientation-imu-fusion-breakout-bno085/arduino)
+* [TinyGPSPlus](https://github.com/mikalhart/TinyGPSPlus) (Install through Arduino Library Manager)
+* [TinyLora](https://github.com/adafruit/TinyLoRa) (Install through Arduino Library Manager)
 
 # Authors
 Abishek Gomes, Devan Mears, Joseph Wackowski, Austin Major
-https://vimeo.com/607661144
 
