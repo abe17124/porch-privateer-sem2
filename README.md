@@ -22,14 +22,16 @@ This device uses a Adafruit BNO085 9 DOF sensor to percieve its current state an
 ![WhatsApp Image 2021-09-17 at 11 07 53 AM](https://user-images.githubusercontent.com/69644136/133819804-879bdd46-a264-48e3-852f-415aea89bee7.jpeg)
 
 # Scripts
-The two scripts included in the repo are test revisions only meant for device development purposes and not intended for production deployment. You will see two scripts in the repo as shown below:
+The scripts included in this repo are test revisions only meant for device development purposes and not intended for production deployment. You will see two scripts in the repo as shown below:
 * LORAWAN_GPS_MOTION_CLASSIFY.ino
 * hello_LoRa-abp-test.ino
-* ChirpstackCode.txt
+* ChirpstackCode.js
+* Send_GPS_Data_WORKING.ino
 
-The first script functions as mentioned in the previous sections, where the accelerometer identifies that the device has moved which then pings the GPS to get current lattitude, longitude, and sattelite counts. This is then packaged in a LoRaWAN packet and sent along with a "Device has moved" packet.
-The second script is a basic functionality testing script that authenticates with the Chirpstack server using ABP and send a packet at regular intervals.
-The final .txt is not a script in and of itself but it contains the Javascript code that we wrote on the chirpstack server.  
+The LORAWAN_GPS_MOTION_CLASSIFY script functions as mentioned in the previous sections, where the accelerometer identifies that the device has moved which then pings the GPS to get current lattitude, longitude, and sattelite counts. This is then packaged in a LoRaWAN packet and sent along with a "Device has moved" packet.
+The hello_LoRa-abp-test is a basic functionality testing script that authenticates with the Chirpstack server using ABP and send a packet at regular intervals.
+The ChirpstackCode.js is not a script in and of itself but it contains the Javascript codec that we wrote on the chirpstack server to decode the string payload recieved from the Node.
+The Send_GPS_Data_WORKING.ino is an arduino sketch that collects data from the GPS module, concatenates both coordinates into a char array, and transmit it as a payload through LoRaWAN.
 
 # Dependancies and Installation
 The following dependancies need to be installed in for proper operation of the device, this device uses the Arduino IDE and other Adafruit Libraries for functioning properly. To properly install the dependancies, please follow the guides below.
