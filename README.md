@@ -1,7 +1,7 @@
 # Porch Pirate IoT LoRaWAN Device Semester 2
 
 # Description
-Porch Pirate IoT BLE Device for Senior Design Project Semester 2 @ Wichita State University. This product allows the Wichita Police Department to track stolen assets/packages and retrieve them. This device is an IoT node that can be placed directly onto critical assets/packages to track the status of the package and alert interested parties through frontend application (Grafana or equivalent) for both iPhone and Android 10+.
+Porch Pirate IoT Device for Senior Design Project Semester 2 @ Wichita State University. This product allows the Wichita Police Department to track stolen assets/packages and retrieve them. This device is an IoT node that can be placed directly onto critical assets/packages to track the status of the package and alert interested parties through frontend application (Grafana or equivalent) for both iPhone and Android 10+.
 
 # Parts List 
 * Adafruit Feather M0 with RFM95 LoRa Radio 
@@ -22,16 +22,8 @@ This device uses a Adafruit BNO085 9 DOF sensor to percieve its current state an
 ![WhatsApp Image 2021-09-17 at 11 07 53 AM](https://user-images.githubusercontent.com/69644136/133819804-879bdd46-a264-48e3-852f-415aea89bee7.jpeg)
 
 # Scripts
-The scripts included in this repo are test revisions only meant for device development purposes and not intended for production deployment. You will see two scripts in the repo as shown below:
-* LORAWAN_GPS_MOTION_CLASSIFY.ino
-* hello_LoRa-abp-test.ino
-* ChirpstackCode.js
-* Send_GPS_Data_WORKING.ino
-
-The LORAWAN_GPS_MOTION_CLASSIFY script functions as mentioned in the previous sections, where the accelerometer identifies that the device has moved which then pings the GPS to get current lattitude, longitude, and sattelite counts. This is then packaged in a LoRaWAN packet and sent along with a "Device has moved" packet.
-The hello_LoRa-abp-test is a basic functionality testing script that authenticates with the Chirpstack server using ABP and send a packet at regular intervals.
-The ChirpstackCode.js is not a script in and of itself but it contains the Javascript codec that we wrote on the chirpstack server to decode the string payload recieved from the Node.
-The Send_GPS_Data_WORKING.ino is an arduino sketch that collects data from the GPS module, concatenates both coordinates into a char array, and transmit it as a payload through LoRaWAN.
+The scripts included in this repo are test revisions only meant for device development purposes and not intended for production deployment. The most recent script under the 'Node' folder is used for position tracking. The GPS recieves NMEA sentences and converts them to usable latitude, longitude, and speed information. The microcontroller then checks to see if the position between previous point, and current point have a change of greater than 2 meters. If such a change exists, a packet is prepared with the format "battery_level, latitude, longitude, speed in mph, speed in mps" and transmitted through LoRaWAN. This is repeated every 5 seconds until no change in position is detected.
+The ChirpstackCode.js is not a script in and of itself but it contains the Javascript codec that we wrote on the chirpstack server to decode the string payload recieved from the Node which is then passed through a Chirpstack integration to our frontend client, Grafana, where the values are parsed to make them viewable as location blips on a worldmap, along with other supporting information.
 
 # Dependancies and Installation
 The following dependancies need to be installed in for proper operation of the device, this device uses the Arduino IDE and other Adafruit Libraries for functioning properly. To properly install the dependancies, please follow the guides below.
@@ -40,7 +32,7 @@ The following dependancies need to be installed in for proper operation of the d
 * [Adafruit Feather M0 RFM95](https://learn.adafruit.com/adafruit-feather-m0-radio-with-lora-radio-module/using-the-rfm-9x-radio)
 * [Adafruit BNO08x Library](https://learn.adafruit.com/adafruit-9-dof-orientation-imu-fusion-breakout-bno085/arduino)
 * [TinyGPSPlus](https://github.com/mikalhart/TinyGPSPlus) (Install through Arduino Library Manager)
-* [TinyLora](https://github.com/adafruit/TinyLoRa) (Install through Arduino Library Manager)
+* [Arduino LMIC](https://www.arduino.cc/reference/en/libraries/mcci-lorawan-lmic-library/) (Install through Arduino Library Manager)
 
 # Authors
 Abishek Gomes, Devan Mears, Joseph Wackowski, Austin Major
