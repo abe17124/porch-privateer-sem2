@@ -9,6 +9,7 @@ Porch Pirate IoT Device for Senior Design Project Semester 2 @ Wichita State Uni
 * GPS Module GT-U7
 * uFL SMT Antenna Connector
 * uFL to RP-SMA antenna adapter cable
+* 915 MHz Antenna
 * RGB LED (Common Anode)
 
 
@@ -29,7 +30,6 @@ The following dependancies need to be installed in for proper operation of the d
 * [Arduino IDE 1.8.13 or higher](https://www.arduino.cc/en/software)
 * [Adafruit SAMD21 Board Dependancies](https://learn.adafruit.com/adafruit-feather-m0-basic-proto/setup)
 * [Adafruit Feather M0 RFM95](https://learn.adafruit.com/adafruit-feather-m0-radio-with-lora-radio-module/using-the-rfm-9x-radio)
-* [Adafruit BNO08x Library](https://learn.adafruit.com/adafruit-9-dof-orientation-imu-fusion-breakout-bno085/arduino)
 * [TinyGPSPlus](https://github.com/mikalhart/TinyGPSPlus) (Install through Arduino Library Manager)
 * [Arduino LMIC](https://www.arduino.cc/reference/en/libraries/mcci-lorawan-lmic-library/) (Install through Arduino Library Manager)
 
