@@ -5,7 +5,6 @@ Porch Pirate IoT Device for Senior Design Project Semester 2 @ Wichita State Uni
 
 # Parts List 
 * Adafruit Feather M0 with RFM95 LoRa Radio 
-* Adafruit 9-DOF Orientation IMU Fusion Breakout - BNO085
 * 3D Printed housing
 * GPS Module GT-U7
 * uFL SMT Antenna Connector
