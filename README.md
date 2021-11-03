@@ -14,11 +14,11 @@ Porch Pirate IoT Device for Senior Design Project Semester 2 @ Wichita State Uni
 
 
 # Method of Operation
-This device uses a Adafruit BNO085 9 DOF sensor to percieve its current state and translates the raw data using the Adafruit Sensor Libraries into motion classifications such as On Table/Ground, Stable, and In Motion. The data is then forwarded to the Adafruit Feather M0 RFM95 where it is processed to send a LoRaWAN "Device is moving" packet through the HopeRF RFM95 chip to nearby Gateways. This data can be accessed through chirpstack and viewed through frontend application for Law Enforcement Officers to understand the state of a critical asset. Next steps include: Identifying motion through GPS coordinates, packaging coordinates as chars, transmitting through LoRaWAN to end gateways.
+The Porch Pirate IoT node actively tracks its own position and alerts LEO’s when its position has changed 2m relative to its position when it was armed. This hardware node can be placed inside packages or affixed to critical city assets such as city bikes, and construction equipment to monitor their location. Once the hardware node detects a position change, it packages its current latitude, longitude, and speed information into an end-to-end encrypted payload that is sent to gateways via LoRaWAN. The information is then decoded and displayed onto a frontend application where LEO’s can track down the package as it actively moves and transmits.
 
 
 # Schematic
-![image](https://user-images.githubusercontent.com/69644136/115118302-29b3da80-9f68-11eb-86fe-3ad450fbcc1e.png)
+![image](![image](https://user-images.githubusercontent.com/69644136/140175616-cf7c68de-2420-4806-bcb4-4887056c8de0.png)
 ![WhatsApp Image 2021-09-17 at 11 07 53 AM](https://user-images.githubusercontent.com/69644136/133819804-879bdd46-a264-48e3-852f-415aea89bee7.jpeg)
 
 # Scripts
