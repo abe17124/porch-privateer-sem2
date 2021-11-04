@@ -19,7 +19,8 @@ The Porch Pirate IoT node actively tracks its own position and alerts LEO’s wh
 
 # Schematic
 ![image](https://user-images.githubusercontent.com/69644136/140175616-cf7c68de-2420-4806-bcb4-4887056c8de0.png)
-![WhatsApp Image 2021-09-17 at 11 07 53 AM](https://user-images.githubusercontent.com/69644136/133819804-879bdd46-a264-48e3-852f-415aea89bee7.jpeg)
+![WhatsApp Image 2021-11-04 at 10 41 32 AM](https://user-images.githubusercontent.com/69644136/140364619-89faeb2f-e145-4e79-8ec1-148cab9a58ea.jpeg)
+
 
 # Scripts
 The scripts included in this repo are test revisions only meant for device development purposes and not intended for production deployment. The most recent script under the 'Node' folder is used for position tracking. The GPS recieves NMEA sentences and converts them to usable latitude, longitude, and speed information. The microcontroller then checks to see if the position between previous point, and current point have a change of greater than 2 meters. If such a change exists, a packet is prepared with the format "battery_level, latitude, longitude, speed in mph, speed in mps" and transmitted through LoRaWAN. This is repeated every 5 seconds until no change in position is detected.
