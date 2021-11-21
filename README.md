@@ -10,7 +10,6 @@ Porch Pirate IoT Device for Senior Design Project Semester 2 @ Wichita State Uni
 * uFL SMT Antenna Connector
 * uFL to RP-SMA antenna adapter cable
 * 915 MHz Antenna
-* RGB LED (Common Anode)
 
 
 # Method of Operation
