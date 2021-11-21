@@ -34,5 +34,5 @@ The following dependancies need to be installed in for proper operation of the d
 * [Arduino LMIC](https://www.arduino.cc/reference/en/libraries/mcci-lorawan-lmic-library/) (Install through Arduino Library Manager)
 
 # Authors
-Abishek Gomes, Devan Mears, Joseph Wackowski, Austin Major
+Abishek Gomes, Joseph Wackowski
 
