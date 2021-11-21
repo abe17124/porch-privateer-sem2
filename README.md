@@ -18,7 +18,7 @@ The Porch Pirate IoT node actively tracks its own position and alerts LEO’s wh
 
 
 # Schematic
-![image](https://user-images.githubusercontent.com/69644136/140175616-cf7c68de-2420-4806-bcb4-4887056c8de0.png)
+![image](https://user-images.githubusercontent.com/69644136/142782587-fe75c587-a839-469c-b799-a6234c22e914.png)
 ![WhatsApp Image 2021-11-04 at 10 41 32 AM](https://user-images.githubusercontent.com/69644136/140364619-89faeb2f-e145-4e79-8ec1-148cab9a58ea.jpeg)
 
 
