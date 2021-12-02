@@ -19,6 +19,9 @@ The Porch Pirate IoT node actively tracks its own position and alerts LEO’s wh
 # Operation and Maintainence
 Operation has been simplified to allows users to have ease of use. Once you have identified your target location outdoors, simply turn on the node (Slide switch shown below moved to the right) while stationary, for proper signal sync of the GPS module. Once turned on, the GPS will have a steady light (standby mode), and when the signal has synced, the GPS led will start flashing every second, this will take a few seconds. At this point, the node is armed and ready to detect changes in position relative to the last position it recorded. Turning off the node (Slide switch moved to the left), will disarm and stop all connectivity/transmission. To charge the battery housed inside the enclosure, connect a microusb into the jack on the Feather board shown below. This will turn on a yellow light to indicate charging, which turns off when the battery is fully charged.
 
+![image](https://user-images.githubusercontent.com/69644136/144472920-b0437cbb-2195-4f99-aee3-5bdd4c6373fc.png)
+![image](https://user-images.githubusercontent.com/69644136/144473018-1fa3bedc-c600-41dd-ab34-2eea91c76244.png)
+
 
 # Schematic
 ![image](https://user-images.githubusercontent.com/69644136/142782587-fe75c587-a839-469c-b799-a6234c22e914.png)
