@@ -33,7 +33,7 @@ The scripts included in this repo are test revisions only meant for device devel
 The ChirpstackCode.js is not a script in and of itself but it contains the Javascript codec that we wrote on the chirpstack server to decode the string payload recieved from the Node which is then passed through a Chirpstack integration to our frontend client, Grafana, where the values are parsed to make them viewable as location blips on a worldmap, along with other supporting information.
 
 
-# Dependancies and Installation
+# Dependencies and Installation
 The following dependancies need to be installed in for proper operation of the device, this device uses the Arduino IDE and other Adafruit Libraries for functioning properly. To properly install the dependancies, please follow the guides below, and install them from top to bottom order.
 * [Arduino IDE 1.8.13 or higher](https://www.arduino.cc/en/software)
 * [Adafruit SAMD21 Board Dependancies](https://learn.adafruit.com/adafruit-feather-m0-basic-proto/setup)
