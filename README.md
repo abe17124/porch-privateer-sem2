@@ -58,6 +58,10 @@ Select "Applications", this will bring up the primary application where all node
 Once selected, you will see the nodes registered under this application. Select "Create"
 ![image](https://user-images.githubusercontent.com/69644136/144475941-764726f7-f8a7-4a7d-883e-799edb09a720.png)
 
+Give your device a desired name and description, click the circular arrow highlighted. This generates a unique Device EUI. Now click the "MSB" button, this will change to "LSB" and reverse the order of your Device EUI. Note this value down and keep it secret. Finally, click the "Device-profile" dropdown and select "PorchPrivateersOTAADeviceProfile" and select "Create Device" at the bottom right of the screen.
+![image](https://user-images.githubusercontent.com/69644136/144476305-c77a2ef7-7e36-46e7-9db9-fdd1df92fb59.png)
+
+
 
 Once these are installed, and the module has been built according to the schematic shown above, please flash your Adafruit Feather M0 RFM95 with the Position_Tracking_No-Serial.ino file found in the Node folder within this repository. 
 
