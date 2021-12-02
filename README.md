@@ -3,17 +3,21 @@
 # Description
 Porch Pirate IoT Device for Senior Design Project Semester 2 @ Wichita State University. This product allows the Wichita Police Department to track stolen assets/packages and retrieve them. This device is an IoT node that can be placed directly onto critical assets/packages to track the status of the package and alert interested parties through frontend application (Grafana or equivalent) for both iPhone and Android 10+.
 
+The Porch Pirate IoT node actively tracks its own position and alerts LEO’s when its position has changed 2m relative to its position when it was armed. This hardware node can be placed inside packages or affixed to critical city assets such as city bikes, and construction equipment to monitor their location. Once the hardware node detects a position change, it packages its current latitude, longitude, and speed information into an end-to-end encrypted payload that is sent to gateways via LoRaWAN. The information is then decoded and displayed onto a frontend application where LEO’s can track down the package as it actively moves and transmits. 
+
 # Parts List 
+
 * Adafruit Feather M0 with RFM95 LoRa Radio 
-* 3D Printed housing
+* 3D Printed housing (See Node Folder)
 * GPS Module GT-U7
 * uFL SMT Antenna Connector
-* uFL to RP-SMA antenna adapter cable
-* 915 MHz Antenna
+* 900MHz Antenna
+* 1500 mAh Li Poly battery
+[Bill of Materials]:(https://docs.google.com/document/d/1Mle4k8iCFTbPMJ-krMxWjjYFfz29U2Eb0DUpucMsKYo/edit?usp=sharing)
 
 
-# Method of Operation
-The Porch Pirate IoT node actively tracks its own position and alerts LEO’s when its position has changed 2m relative to its position when it was armed. This hardware node can be placed inside packages or affixed to critical city assets such as city bikes, and construction equipment to monitor their location. Once the hardware node detects a position change, it packages its current latitude, longitude, and speed information into an end-to-end encrypted payload that is sent to gateways via LoRaWAN. The information is then decoded and displayed onto a frontend application where LEO’s can track down the package as it actively moves and transmits.
+# Operation and Maintainence
+Operation has been simplified to allows users to have ease of use. Once you have identified your target location outdoors, simply turn on the node (Slide switch shown below moved to the right) while stationary, for proper signal sync of the GPS module. Once turned on, the GPS will have a steady light (standby mode), and when the signal has synced, the GPS led will start flashing every second, this will take a few seconds. At this point, the node is armed and ready to detect changes in position relative to the last position it recorded. Turning off the node (Slide switch moved to the left), will disarm and stop all connectivity/transmission. To charge the battery housed inside the enclosure, connect a microusb into the jack on the Feather board shown below. This will turn on a yellow light to indicate charging, which turns off when the battery is fully charged.
 
 
 # Schematic
@@ -32,6 +36,8 @@ The following dependancies need to be installed in for proper operation of the d
 * [Adafruit Feather M0 RFM95](https://learn.adafruit.com/adafruit-feather-m0-radio-with-lora-radio-module/using-the-rfm-9x-radio)
 * [TinyGPSPlus](https://github.com/mikalhart/TinyGPSPlus) (Install through Arduino Library Manager)
 * [Arduino LMIC](https://www.arduino.cc/reference/en/libraries/mcci-lorawan-lmic-library/) (Install through Arduino Library Manager)
+
+Once these are installed, and the module has been built according to the schematic shown above, please flash your Adafruit Feather M0 RFM95 with the Position_Tracking_No-Serial.ino file found in the Node folder within this repository.
 
 # Authors
 Abishek Gomes, Joseph Wackowski
