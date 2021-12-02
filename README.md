@@ -16,10 +16,11 @@ The Porch Pirate IoT node actively tracks its own position and alerts LEO’s wh
 * uFL SMT Antenna Connector
 * 900MHz Antenna
 * 1500 mAh Li Poly battery
+* 30x70mm Protoboard (only 1 needed)
 * [Bill of Materials](https://docs.google.com/document/d/1Mle4k8iCFTbPMJ-krMxWjjYFfz29U2Eb0DUpucMsKYo/edit?usp=sharing)
 
 
-# Operation and Maintainence
+# Operation and Maintenance
 Operation has been extremely simplified for ease of use. Once you have identified your target location outdoors, simply turn on the node (Slide switch shown below moved to the right) while stationary, for proper signal sync of the GPS module. Once turned on, the GPS will have a steady light (standby mode), and when the signal has synced, the GPS led will flash every second, this process will take a few seconds. At this point, the node is armed and ready to detect changes in position relative to the last position it recorded. Turning off the node (Slide switch moved to the left), will disarm and stop all connectivity/transmission. To charge the battery housed inside the enclosure, connect a microusb into the jack on the Feather board shown below and plug it into a phone charger. This will turn on a yellow light to indicate charging, which turns off when the battery is fully charged.
 
 ![image](https://user-images.githubusercontent.com/69644136/144472920-b0437cbb-2195-4f99-aee3-5bdd4c6373fc.png)
@@ -31,14 +32,14 @@ Operation has been extremely simplified for ease of use. Once you have identifie
 
 
 # Scripts
-The scripts included in this repo are test revisions only meant for device development purposes and not intended for production deployment. The most recent script under the 'Node' folder is used for position tracking. The GPS module recieves NMEA sentences and converts them to usable latitude, longitude, and speed information. The microcontroller then checks to see if the position between previous point, and current point have a change of greater than 2 meters. If such a change exists, a packet is prepared with the format "battery_level, latitude, longitude, speed in mph, speed in mps”' and transmitted through LoRaWAN. This is repeated every 5 seconds until no change in position is detected.
+The scripts included in this repo are test revisions only meant for device development purposes and not intended for production deployment. The most recent script under the 'Node' folder is used for position tracking. The GPS module receives NMEA sentences and converts them to usable latitude, longitude, and speed information. The microcontroller then checks to see if the position between previous point, and current point have a change of greater than 2 meters. If such a change exists, a packet is prepared with the format "battery_level, latitude, longitude, speed in mph, speed in mps”' and transmitted through LoRaWAN. This is repeated every 5 seconds until no change in position is detected.
 The ChirpstackCode.js is not a script in and of itself but it contains the Javascript codec that we wrote on the chirpstack server to decode the string payload received from the Node which is then passed through a Chirpstack integration to our frontend client, Grafana, where the values are parsed to make them viewable as location blips on a world map, along with other supporting information.
 
 
 # Dependencies 
 The following dependencies need to be installed for proper operation of the device, this device uses the Arduino IDE and other Adafruit Libraries for functioning properly. To properly install the dependencies, please follow the guides below, and install them from top to bottom order.
 * [Arduino IDE 1.8.13 or higher](https://www.arduino.cc/en/software)
-* [Adafruit SAMD21 Board Dependancies](https://learn.adafruit.com/adafruit-feather-m0-basic-proto/setup)
+* [Adafruit SAMD21 Board Dependencies](https://learn.adafruit.com/adafruit-feather-m0-basic-proto/setup)
 * [Adafruit Feather M0 RFM95](https://learn.adafruit.com/adafruit-feather-m0-radio-with-lora-radio-module/using-the-rfm-9x-radio)
 * [TinyGPSPlus](https://github.com/mikalhart/TinyGPSPlus) (Install through Arduino Library Manager)
 * [Arduino LMIC](https://www.arduino.cc/reference/en/libraries/mcci-lorawan-lmic-library/) (Install through Arduino Library Manager)
