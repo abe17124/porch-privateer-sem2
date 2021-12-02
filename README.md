@@ -47,6 +47,7 @@ The following dependencies need to be installed for proper operation of the devi
 # Chirpstack Setup and Installation
 It is required to generate a new device on the Chirpstack on the GoCreate LoRaWAN server to properly initiate authentication between the Node, Gateway, and Server. Please follow each step from top to bottom order.
 [Install VPN and Connect to it, Steps 1-11](https://www.wichita.edu/services/its/ITSApplicationsTraining/VPNWIndows.php)
+
 ![image](https://user-images.githubusercontent.com/69644136/144474993-d7f68b32-6299-4faf-8b9b-d8cfa39446e9.png)
 
 Once connected, log on to the Chirpstack application server on http://10.50.208.17:8080/#/login Username and password is located "Server Credentials" document under server
