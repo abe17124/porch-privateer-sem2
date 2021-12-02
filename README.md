@@ -35,7 +35,7 @@ The scripts included in this repo are test revisions only meant for device devel
 The ChirpstackCode.js is not a script in and of itself but it contains the Javascript codec that we wrote on the chirpstack server to decode the string payload received from the Node which is then passed through a Chirpstack integration to our frontend client, Grafana, where the values are parsed to make them viewable as location blips on a world map, along with other supporting information.
 
 
-# Dependencies and Installation
+# Dependencies 
 The following dependencies need to be installed for proper operation of the device, this device uses the Arduino IDE and other Adafruit Libraries for functioning properly. To properly install the dependencies, please follow the guides below, and install them from top to bottom order.
 * [Arduino IDE 1.8.13 or higher](https://www.arduino.cc/en/software)
 * [Adafruit SAMD21 Board Dependancies](https://learn.adafruit.com/adafruit-feather-m0-basic-proto/setup)
@@ -43,7 +43,7 @@ The following dependencies need to be installed for proper operation of the devi
 * [TinyGPSPlus](https://github.com/mikalhart/TinyGPSPlus) (Install through Arduino Library Manager)
 * [Arduino LMIC](https://www.arduino.cc/reference/en/libraries/mcci-lorawan-lmic-library/) (Install through Arduino Library Manager)
 
-# Chirpstack Setup
+# Chirpstack Setup and Installation
 It is required to generate a new device on the Chirpstack on the GoCreate LoRaWAN server to properly initiate authentication between the Node, Gateway, and Server. Please follow each step from top to bottom order.
 [Install VPN and Connect to it, Steps 1-11](https://www.wichita.edu/services/its/ITSApplicationsTraining/VPNWIndows.php)
 ![image](https://user-images.githubusercontent.com/69644136/144474993-d7f68b32-6299-4faf-8b9b-d8cfa39446e9.png)
