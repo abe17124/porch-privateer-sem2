@@ -61,9 +61,21 @@ Once selected, you will see the nodes registered under this application. Select 
 Give your device a desired name and description, click the circular arrow highlighted. This generates a unique Device EUI. Now click the "MSB" button, this will change to "LSB" and reverse the order of your Device EUI. Note this value down and keep it secret. Finally, click the "Device-profile" dropdown and select "PorchPrivateersOTAADeviceProfile" and select "Create Device" at the bottom right of the screen.
 ![image](https://user-images.githubusercontent.com/69644136/144476305-c77a2ef7-7e36-46e7-9db9-fdd1df92fb59.png)
 
+Now you will be taken to a panel that says "Keys OTAA" as shown below, select the circular arrow highlighted, and notate this value down. **There is no need to click MSB in this case**. Click "Set Device Keys" in the bottom right. Your device is now successfully created, we have to now change the values we recorded into hexadecimal form, and add them to our script.
+![image](https://user-images.githubusercontent.com/69644136/144476906-6861fdc6-9dd1-4159-8140-081558a03e22.png)
+
+Reorder your values and convert them to hexadecimal with the following steps, and keep note of your new values.
+![image](https://user-images.githubusercontent.com/69644136/144477919-faa72112-b0f1-497a-ba6e-d16d5ba96bb7.png)
+
+Open the Position_Tracking_No-Serial.ino script and ensure your Feather M0 is plugged into your computer and recognized. Copy and paste your "DeviceEUI" key replacing the existing value, your final result will look like this (except with your own unique keys):
+![image](https://user-images.githubusercontent.com/69644136/144478220-12a01c2c-8d99-45c9-8156-66415bbdfbda.png)
+
+Copy and paste your application key replacing the existing value, your final result will look like this (except with your own unique keys):
+![image](https://user-images.githubusercontent.com/69644136/144478354-dfe7dbfd-7ec7-481a-9310-2eaa5c64f45d.png)
 
 
-Once these are installed, and the module has been built according to the schematic shown above, please flash your Adafruit Feather M0 RFM95 with the Position_Tracking_No-Serial.ino file found in the Node folder within this repository. 
+
+Once all of these steps have been properly executed, please flash your Adafruit Feather M0 RFM95 with the Position_Tracking_No-Serial.ino file found in the Node folder within this repository. Your node is now ready for use. Follow the instructions given in "Operation and Maintainence" and you will see LoRaWAN Frames and Device Data showing up when in range with the LoRaWAN Gateway.
 
 # Authors
 Abishek Gomes, Joseph Wackowski
