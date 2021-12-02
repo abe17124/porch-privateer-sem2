@@ -52,6 +52,12 @@ Once connected, log on to the Chirpstack application server on http://10.50.208.
 Navigate to the dropdown menu listed "Gateway"and select "PorchPrivateersOrg". This is the organization under which all our nodes, and Grafana exist.
 ![image](https://user-images.githubusercontent.com/69644136/144475420-9ffa4ceb-f1aa-471e-ad17-1563a99f7e20.png)
 
+Select "Applications", this will bring up the primary application where all nodes and integrations lie. Then select "PorchPrivateersApplication"
+![image](https://user-images.githubusercontent.com/69644136/144475700-04a17219-a99d-43d7-8a33-93b4715ccc82.png)
+
+Once selected, you will see the nodes registered under this application. Select "Create"
+![image](https://user-images.githubusercontent.com/69644136/144475941-764726f7-f8a7-4a7d-883e-799edb09a720.png)
+
 
 Once these are installed, and the module has been built according to the schematic shown above, please flash your Adafruit Feather M0 RFM95 with the Position_Tracking_No-Serial.ino file found in the Node folder within this repository. 
 
