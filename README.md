@@ -13,7 +13,7 @@ The Porch Pirate IoT node actively tracks its own position and alerts LEO’s wh
 * uFL SMT Antenna Connector
 * 900MHz Antenna
 * 1500 mAh Li Poly battery
-[Bill of Materials]:(https://docs.google.com/document/d/1Mle4k8iCFTbPMJ-krMxWjjYFfz29U2Eb0DUpucMsKYo/edit?usp=sharing)
+* [Bill of Materials]:(https://docs.google.com/document/d/1Mle4k8iCFTbPMJ-krMxWjjYFfz29U2Eb0DUpucMsKYo/edit?usp=sharing)
 
 
 # Operation and Maintainence
